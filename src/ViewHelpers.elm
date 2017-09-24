@@ -46,8 +46,6 @@ navigation : Model -> Attribute Msg -> Attribute Msg -> Html Msg
 navigation model navClass menuClass =
     nav [ navClass ]
         [ ul [ menuClass ]
-            [ normalLinkItem model.url.base_url "/" "Home" ]
-        , ul [ menuClass ]
             (List.map (navItem model) (routingItem model.url.base_url))
         ]
 

@@ -73,7 +73,8 @@ urlFor base_url route =
 
 routingItem : String -> List ( String, String, Route, String )
 routingItem base_url =
-    [ ( "Recipes", "", ArchiveRoute, base_url ++ "/archive" )
+    [ ( "Home", "", HomeRoute, base_url ++ "/" )
+    , ( "Recipes", "", ArchiveRoute, base_url ++ "/archive" )
     , ( "About", "", AboutRoute, base_url ++ "/about" )
     , ( "Authors", "", AuthorRoute, base_url ++ "/author" )
     ]

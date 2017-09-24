@@ -50,10 +50,12 @@ nav  ul {
 
 .meilabContentContainer {
     flex: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 759px;
+    padding: 1.5em;
 }
 
 .meilabHomePageHero, .meilabPostHero {
@@ -107,8 +109,9 @@ nav  ul {
 }
 
 .meilabMenuList, .meilabMenuListVertical, .meilabHeaderMenuList {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -131,8 +134,7 @@ nav  ul {
 }
 
 .meilabMenuItem {
-    flex: 1;
-    padding: 0 1rem;
+    padding-left: 0.2rem;
 }
 
 .meilabMenuToggler {
@@ -166,7 +168,7 @@ nav  ul {
 
 .meilabHeaderNav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     color: #FFFFFF;
     text-transform: uppercase;
 }
@@ -176,6 +178,10 @@ nav  ul {
 }
 
 .meilabHeaderNav  a:hover {
+    color: #FFDC00;
+}
+
+.meilabHeaderNav  a:active {
     color: #FFDC00;
 }
 
@@ -205,15 +211,41 @@ nav  ul {
     flex-direction: column;
 }
 
+.meilabMarkdownWrapper {
+    width: 100%;
+}
+
+.meilabMarkdownContent {
+    width: 100%;
+}
+
 .meilabSpacing {
     padding: 50px 0;
 }
 
-@media screen and (max-width : 48em) {
+@media screen and (min-width : 48em) {
         .meilabHomePageHero {
     height: 60vh;
     min-height: 240px;
     padding: 15% 0;
+}
+}
+
+@media screen and (min-width : 48em) {
+        .meilabHeaderNav {
+    justify-content: flex-start;
+}
+}
+
+@media screen and (min-width : 48em) {
+        .meilabMenuList {
+    justify-content: flex-start;
+}
+}
+
+@media screen and (min-width : 48em) {
+        .meilabContentContainer {
+    padding: 0 12%;
 }
 }
 
@@ -262,19 +294,6 @@ nav  ul {
     max-width: 759px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.meilabPostContainer {
-    padding: 1.5em;
-}
-
-.meilabPostPreviewContainer {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 759px;
 }
 
 .meilabPostPreview {
@@ -353,12 +372,6 @@ nav  ul {
 
 .meilabPostContentPreview:hover {
     color: #0085a1;
-}
-
-@media screen and (min-width : 48em) {
-        .meilabPostContainer {
-    padding: 0 12%;
-}
 }
 
 .meilabTagContainer {

@@ -16309,39 +16309,6 @@ var _meilab$meilab$Routing$PostDetailRoute = function (a) {
 };
 var _meilab$meilab$Routing$ArchiveRoute = {ctor: 'ArchiveRoute'};
 var _meilab$meilab$Routing$AboutRoute = {ctor: 'AboutRoute'};
-var _meilab$meilab$Routing$routingItem = function (base_url) {
-	return {
-		ctor: '::',
-		_0: {
-			ctor: '_Tuple4',
-			_0: 'Recipes',
-			_1: '',
-			_2: _meilab$meilab$Routing$ArchiveRoute,
-			_3: A2(_elm_lang$core$Basics_ops['++'], base_url, '/archive')
-		},
-		_1: {
-			ctor: '::',
-			_0: {
-				ctor: '_Tuple4',
-				_0: 'About',
-				_1: '',
-				_2: _meilab$meilab$Routing$AboutRoute,
-				_3: A2(_elm_lang$core$Basics_ops['++'], base_url, '/about')
-			},
-			_1: {
-				ctor: '::',
-				_0: {
-					ctor: '_Tuple4',
-					_0: 'Authors',
-					_1: '',
-					_2: _meilab$meilab$Routing$AuthorRoute,
-					_3: A2(_elm_lang$core$Basics_ops['++'], base_url, '/author')
-				},
-				_1: {ctor: '[]'}
-			}
-		}
-	};
-};
 var _meilab$meilab$Routing$HomeRoute = {ctor: 'HomeRoute'};
 var _meilab$meilab$Routing$matchers = function (base_url) {
 	return _evancz$url_parser$UrlParser$oneOf(
@@ -16406,6 +16373,49 @@ var _meilab$meilab$Routing$parseLocation = F2(
 			return _meilab$meilab$Routing$NotFoundRoute;
 		}
 	});
+var _meilab$meilab$Routing$routingItem = function (base_url) {
+	return {
+		ctor: '::',
+		_0: {
+			ctor: '_Tuple4',
+			_0: 'Home',
+			_1: '',
+			_2: _meilab$meilab$Routing$HomeRoute,
+			_3: A2(_elm_lang$core$Basics_ops['++'], base_url, '/')
+		},
+		_1: {
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple4',
+				_0: 'Recipes',
+				_1: '',
+				_2: _meilab$meilab$Routing$ArchiveRoute,
+				_3: A2(_elm_lang$core$Basics_ops['++'], base_url, '/archive')
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple4',
+					_0: 'About',
+					_1: '',
+					_2: _meilab$meilab$Routing$AboutRoute,
+					_3: A2(_elm_lang$core$Basics_ops['++'], base_url, '/about')
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple4',
+						_0: 'Authors',
+						_1: '',
+						_2: _meilab$meilab$Routing$AuthorRoute,
+						_3: A2(_elm_lang$core$Basics_ops['++'], base_url, '/author')
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	};
+};
 
 var _meilab$meilab$Types$Author = F7(
 	function (a, b, c, d, e, f, g) {
@@ -16950,7 +16960,6 @@ var _rtfeldman$elm_css_helpers$Html_CssHelpers$Namespace = F4(
 
 var _meilab$meilab$Styles_SharedStyles$meilabNamespace = _rtfeldman$elm_css_helpers$Html_CssHelpers$withNamespace('meilab');
 var _meilab$meilab$Styles_SharedStyles$PostHead = {ctor: 'PostHead'};
-var _meilab$meilab$Styles_SharedStyles$PostContainer = {ctor: 'PostContainer'};
 var _meilab$meilab$Styles_SharedStyles$BlogPost = {ctor: 'BlogPost'};
 var _meilab$meilab$Styles_SharedStyles$PostHero = {ctor: 'PostHero'};
 var _meilab$meilab$Styles_SharedStyles$MorePostsLink = {ctor: 'MorePostsLink'};
@@ -16997,7 +17006,6 @@ var _meilab$meilab$Styles_SharedStyles$PostPreviewSubtitle = {ctor: 'PostPreview
 var _meilab$meilab$Styles_SharedStyles$PostPreviewTitle = {ctor: 'PostPreviewTitle'};
 var _meilab$meilab$Styles_SharedStyles$PostPreviewMeta = {ctor: 'PostPreviewMeta'};
 var _meilab$meilab$Styles_SharedStyles$PostPreview = {ctor: 'PostPreview'};
-var _meilab$meilab$Styles_SharedStyles$PostPreviewContainer = {ctor: 'PostPreviewContainer'};
 var _meilab$meilab$Styles_SharedStyles$Container = {ctor: 'Container'};
 var _meilab$meilab$Styles_SharedStyles$Layout = {ctor: 'Layout'};
 
@@ -17107,20 +17115,6 @@ var _meilab$meilab$ViewHelpers$navItem = F2(
 			_p2._3,
 			_p2._0);
 	});
-var _meilab$meilab$ViewHelpers$normalLinkItem = F3(
-	function (base_url, slug, textToShow) {
-		return A6(
-			_meilab$meilab$ViewHelpers$linkItem,
-			_meilab$meilab$ViewHelpers$class(
-				{ctor: '[]'}),
-			_meilab$meilab$Messages$NewUrl(
-				A2(_elm_lang$core$Basics_ops['++'], base_url, slug)),
-			_meilab$meilab$ViewHelpers$class(
-				{ctor: '[]'}),
-			'',
-			slug,
-			textToShow);
-	});
 var _meilab$meilab$ViewHelpers$navigation = F3(
 	function (model, navClass, menuClass) {
 		return A2(
@@ -17139,26 +17133,11 @@ var _meilab$meilab$ViewHelpers$navigation = F3(
 						_0: menuClass,
 						_1: {ctor: '[]'}
 					},
-					{
-						ctor: '::',
-						_0: A3(_meilab$meilab$ViewHelpers$normalLinkItem, model.url.base_url, '/', 'Home'),
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$ul,
-						{
-							ctor: '::',
-							_0: menuClass,
-							_1: {ctor: '[]'}
-						},
-						A2(
-							_elm_lang$core$List$map,
-							_meilab$meilab$ViewHelpers$navItem(model),
-							_meilab$meilab$Routing$routingItem(model.url.base_url))),
-					_1: {ctor: '[]'}
-				}
+					A2(
+						_elm_lang$core$List$map,
+						_meilab$meilab$ViewHelpers$navItem(model),
+						_meilab$meilab$Routing$routingItem(model.url.base_url))),
+				_1: {ctor: '[]'}
 			});
 	});
 var _meilab$meilab$ViewHelpers$headerNav = function (model) {
@@ -17228,6 +17207,20 @@ var _meilab$meilab$ViewHelpers$verticalNav = function (model) {
 				_1: {ctor: '[]'}
 			}));
 };
+var _meilab$meilab$ViewHelpers$normalLinkItem = F3(
+	function (base_url, slug, textToShow) {
+		return A6(
+			_meilab$meilab$ViewHelpers$linkItem,
+			_meilab$meilab$ViewHelpers$class(
+				{ctor: '[]'}),
+			_meilab$meilab$Messages$NewUrl(
+				A2(_elm_lang$core$Basics_ops['++'], base_url, slug)),
+			_meilab$meilab$ViewHelpers$class(
+				{ctor: '[]'}),
+			'',
+			slug,
+			textToShow);
+	});
 var _meilab$meilab$ViewHelpers$externalLink = F2(
 	function (url, textToShow) {
 		return A2(
@@ -22525,7 +22518,7 @@ var _meilab$meilab$Views_Archives$renderArchives = function (model) {
 			_0: _meilab$meilab$Views_Archives$class(
 				{
 					ctor: '::',
-					_0: _meilab$meilab$Styles_SharedStyles$PostPreviewContainer,
+					_0: _meilab$meilab$Styles_SharedStyles$ContentContainer,
 					_1: {ctor: '[]'}
 				}),
 			_1: {ctor: '[]'}
@@ -22688,7 +22681,7 @@ var _meilab$meilab$Views_Home$renderPosts = function (model) {
 			_0: _meilab$meilab$Views_Home$class(
 				{
 					ctor: '::',
-					_0: _meilab$meilab$Styles_SharedStyles$PostPreviewContainer,
+					_0: _meilab$meilab$Styles_SharedStyles$ContentContainer,
 					_1: {ctor: '[]'}
 				}),
 			_1: {ctor: '[]'}
@@ -22837,7 +22830,7 @@ var _meilab$meilab$Views_Page$content = function (model) {
 			_0: _meilab$meilab$Views_Page$class(
 				{
 					ctor: '::',
-					_0: _meilab$meilab$Styles_SharedStyles$PostContainer,
+					_0: _meilab$meilab$Styles_SharedStyles$ContentContainer,
 					_1: {ctor: '[]'}
 				}),
 			_1: {ctor: '[]'}

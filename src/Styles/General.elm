@@ -58,10 +58,12 @@ css =
             ]
         , class ContentContainer
             [ flex (int 1)
+            , width (pct 100)
             , displayFlex
             , flexDirection column
             , alignItems center
             , maxWidth (px 759)
+            , padding (Css.em 1.5)
             ]
         , each [ class HomePageHero, class PostHero ]
             [ color snow
@@ -103,8 +105,9 @@ css =
             , backgroundColor ember
             ]
         , each [ class MenuList, class MenuListVertical, class HeaderMenuList ]
-            [ displayFlex
-            , justifyContent center
+            [ width (pct 100)
+            , displayFlex
+            , justifyContent spaceAround
             , listStyle none
             , padding zero
             , margin zero
@@ -124,8 +127,7 @@ css =
             [ display block
             ]
         , class MenuItem
-            [ flex (int 1)
-            , padding2 zero (Css.rem 1)
+            [ paddingLeft (Css.rem 0.2)
 
             -- , border3 (px 1) solid silver
             ]
@@ -155,7 +157,7 @@ css =
             ]
         , class HeaderNav
             [ displayFlex
-            , justifyContent spaceBetween
+            , justifyContent center
             , color white
             , textTransform uppercase
             , descendants
@@ -164,6 +166,8 @@ css =
                     , hover
                         [ color yellow
                         ]
+                    , active
+                        [ color yellow ]
                     ]
                 ]
             ]
@@ -188,13 +192,24 @@ css =
             [ displayFlex
             , flexDirection column
             ]
+        , class MarkdownWrapper
+            [ width (pct 100) ]
+        , class MarkdownContent
+            [ width (pct 100)
+            ]
         , class Spacing
             [ padding2 (px 50) zero ]
-        , mediaQuery "screen and (max-width : 48em)"
+        , mediaQuery "screen and (min-width : 48em)"
             [ class HomePageHero
                 [ height (vh 60)
                 , minHeight (px 240)
                 , padding2 (pct 15) zero
                 ]
+            , class HeaderNav
+                [ justifyContent flexStart ]
+            , class MenuList
+                [ justifyContent flexStart ]
+            , class ContentContainer
+                [ padding2 zero (pct 12) ]
             ]
         ]
