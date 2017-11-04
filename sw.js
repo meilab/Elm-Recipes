@@ -1,13 +1,13 @@
 var cacheName = "elm-pwa";
 var filesToCache = [
-  "/",
-  "/index.html",
-  "/elm.js",
-  "/css/meilab.css",
-  "images/404.png",
-  "images/cover1.jpg",
-  "images/elm.png",
-  "images/favicon.ico"
+  "./",
+  "./index.html",
+  "./elm.js",
+  "./css/meilab.css",
+  "./images/404.png",
+  "./images/cover1.jpg",
+  "./images/elm.png",
+  "./images/favicon.ico"
 ];
 
 self.addEventListener('install', function(e){
