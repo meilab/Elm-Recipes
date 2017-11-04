@@ -1,6 +1,6 @@
 {
-  "name": "Elm_Receipt",
-  "short_name": "Elm_Receipt",
+  "name": "Elm_Recipes",
+  "short_name": "Elm_Recipes",
   "icons": [{
     "src": "images/icons/icon-128x128.png",
       "sizes": "128x128",

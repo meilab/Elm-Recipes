@@ -212,11 +212,14 @@ nav  ul {
 }
 
 .meilabMarkdownWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
 .meilabMarkdownContent {
-    width: 100%;
+    width: 90%;
 }
 
 .meilabSpacing {

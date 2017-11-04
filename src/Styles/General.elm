@@ -193,9 +193,13 @@ css =
             , flexDirection column
             ]
         , class MarkdownWrapper
-            [ width (pct 100) ]
+            [ displayFlex
+            , flexDirection column
+            , alignItems center
+            , width (pct 100)
+            ]
         , class MarkdownContent
-            [ width (pct 100)
+            [ width (pct 90)
             ]
         , class Spacing
             [ padding2 (px 50) zero ]

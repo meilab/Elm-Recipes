@@ -22473,7 +22473,7 @@ var _meilab$meilab$Views_SharedViews$hero = F2(
 					_elm_lang$html$Html$img,
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$src('image/elm.png'),
+						_0: _elm_lang$html$Html_Attributes$src('images/elm.png'),
 						_1: {
 							ctor: '::',
 							_0: _meilab$meilab$Views_SharedViews$class(

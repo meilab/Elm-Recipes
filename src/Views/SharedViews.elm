@@ -124,7 +124,7 @@ hero srcUrl heroClass =
             ]
         ]
         [ img
-            [ src "image/elm.png"
+            [ src "images/elm.png"
             , class [ IconImg ]
             ]
             []
