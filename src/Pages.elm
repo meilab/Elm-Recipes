@@ -19,7 +19,7 @@ home =
     , author = Authors.wy
     , markdown = RemoteData.NotAsked
     , preview = ""
-    , hero = "image/cover1.jpg"
+    , hero = "images/cover1.jpg"
     , tags = []
     }
 
@@ -35,7 +35,7 @@ about =
     , author = Authors.wy
     , markdown = RemoteData.NotAsked
     , preview = ""
-    , hero = "image/cover1.jpg"
+    , hero = "images/cover1.jpg"
     , tags = []
     }
 
@@ -51,7 +51,7 @@ archives =
     , author = Authors.wy
     , markdown = RemoteData.NotAsked
     , preview = ""
-    , hero = "image/cover1.jpg"
+    , hero = "images/cover1.jpg"
     , tags = []
     }
 
@@ -67,7 +67,7 @@ authors =
     , author = Authors.wy
     , markdown = RemoteData.NotAsked
     , preview = ""
-    , hero = "image/cover1.jpg"
+    , hero = "images/cover1.jpg"
     , tags = []
     }
 
@@ -83,7 +83,7 @@ notFoundContent =
     , author = Authors.wy
     , markdown = RemoteData.NotAsked
     , preview = ""
-    , hero = "image/cover1.jpg"
+    , hero = "images/cover1.jpg"
     , tags = []
     }
 
@@ -99,7 +99,7 @@ notFound404 =
     , author = Authors.wy
     , markdown = RemoteData.NotAsked
     , preview = ""
-    , hero = "image/cover1.jpg"
+    , hero = "images/cover1.jpg"
     , tags = []
     }
 

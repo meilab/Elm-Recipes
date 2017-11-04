@@ -28,8 +28,9 @@ type TagType
     | Strings
     | Functions
     | Types
+    | DataStructure
+    | Destructuring
     | Union
-    | Numbers
     | Repl
     | Debugging
     | Files
@@ -37,6 +38,7 @@ type TagType
     | NativeUi
     | Plotting
     | Json
+    | Phoenix
 
 
 type alias Tags =

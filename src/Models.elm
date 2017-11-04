@@ -31,7 +31,8 @@ tags =
     , Functions
     , Types
     , Union
-    , Numbers
+    , DataStructure
+    , Destructuring
     , Repl
     , Debugging
     , Files
@@ -39,6 +40,7 @@ tags =
     , NativeUi
     , Plotting
     , Json
+    , Phoenix
     ]
 
 
