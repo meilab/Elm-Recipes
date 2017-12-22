@@ -12297,7 +12297,7 @@ var _meilab$meilab$Routing$footerRoutingItem = {
 		_0: {ctor: '_Tuple3', _0: 'Weibo', _1: 'fa fa-weibo fa-stack-1x fa-inverse', _2: 'http://weibo.com/meilab'},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple3', _0: 'Linkedin', _1: 'fa fa-linkedin fa-stack-1x fa-inverse', _2: 'https://linkedin.com/meilab'},
+			_0: {ctor: '_Tuple3', _0: 'Linkedin', _1: 'fa fa-linkedin fa-stack-1x fa-inverse', _2: 'https://linkedin.com/in/meilab'},
 			_1: {ctor: '[]'}
 		}
 	}
@@ -19147,7 +19147,7 @@ var _meilab$meilab$Update$update = F2(
 		}
 	});
 
-var _meilab$meilab$Main$ghProjectName = 'Elm_Recipes';
+var _meilab$meilab$Main$ghProjectName = '';
 var _meilab$meilab$Main$init = function (location) {
 	var base_url = function () {
 		var _p0 = A2(
