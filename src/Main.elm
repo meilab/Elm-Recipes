@@ -20,7 +20,7 @@ main =
 
 ghProjectName : String
 ghProjectName =
-    ""
+    "Elm-Recipes"
 
 
 init : Navigation.Location -> ( Model, Cmd Msg )
